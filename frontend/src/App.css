@@ -2,7 +2,6 @@
   max-width: 100%;
   overflow: auto;
   min-height: 300px;
-  border: 1px solid steelblue;
   padding: 30px;
   border-radius: 5px;
   align-items: center;
@@ -101,7 +100,7 @@
 .Photo{
   width:240px;
   height:151px;
-  background-color: black;
+  background-color: rgb(161, 161, 161);
   margin-top: 25px;
   border-radius: 15px;
   margin-left: 7px;
@@ -110,12 +109,13 @@
 .Vaccinability{
   width:240px;
   height:43px;
-  background-color: black;
+  background-color: rgb(161, 161, 161);
   margin-top: 20px;
   border-radius: 15px;
   margin-left: 7px;
   margin-bottom: 10px;
-  color: #f9f9f9;
+  color: #3f3f3f;
+  font-weight: bold;
   justify-content: center;
 }
 
@@ -164,7 +164,6 @@
   border-radius: 15px;
   justify-content: center;
   padding-top: 25px;
-  align-self: center;
 }
 
 .CardText{
@@ -181,7 +180,6 @@
   background-color: #000;
   border-radius: 15px;
   margin-left: 8%;
-
 }
 
 .BigDiv{
@@ -199,4 +197,85 @@
   font-weight: bold;
   margin-top: 40%;
   font-size: 20px;
+}
+
+.PopupContainer{
+  margin-top: 5%;
+  max-width: 60%;
+  overflow: auto;
+  min-height: 300px;
+  padding: 30px;
+  border-radius: 5px;
+  align-items: center;
+  background-color: #c4c4c4;
+  align-self: center;
+  justify-content: center;
+  margin-left: 18%;
+}
+
+.Information{
+  max-width: 100%;
+  background-color: rgb(161, 161, 161);
+  min-height: 100px;
+  border-radius: 10px;
+  color:white;
+  overflow: auto;
+}
+
+.Ameneties{
+  max-width: 100%;
+  background-color: rgb(161, 161, 161);
+  min-height: 100px;
+  border-radius: 10px;
+  margin-top: 1%;
+  color:white;
+  overflow: auto;
+}
+
+.PictureContainer{
+  max-width: 100%;
+  background-color: rgb(161, 161, 161);
+  min-height: 300px;
+  border-radius: 10px;
+  overflow: auto;
+  margin-top: 1%;
+  
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+
+}
+
+.SinglePicture{
+  min-height: 300px;
+  max-width: 60%;
+  background-color: white;
+  margin-left: 20%;
+  margin-bottom: 1%;
+  margin-top: 1%;
+}
+
+.OffersContainer{
+  max-width: 100%;
+  background-color: rgb(161, 161, 161);
+  min-height: 150px;
+  border-radius: 15px;
+  overflow: auto;
+  margin-top: 1%;
+}
+
+.SingleOffer{
+  max-width: 95%;
+  background-color: rgb(78, 78, 78);
+  min-height: 100px;
+  border-radius: 10px;
+  color:white;
+  overflow: auto;
+  margin-top: 2%;
+  margin-left: 2.4%;
+  margin-bottom:2%;
+}
+
+.OfferText{
+  margin-left: 3%;
 }

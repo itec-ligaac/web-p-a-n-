@@ -4,6 +4,7 @@ import SearchBar from './components/SearchBar'
 import LocationContainer from './components/LocationContainer'
 import { useState } from 'react'
 import HotelContainer from './components/HotelContainer'
+import Popup from './components/Popup'
 
 function App() {
   const [searchLocation, setSearchLocation] = useState("");
@@ -13,6 +14,7 @@ function App() {
       <SearchBar searchLocation={searchLocation} setSearchLocation={setSearchLocation} />
       <LocationContainer setSearchLocation={setSearchLocation} />
       <HotelContainer/>
+      <Popup/>
     </div>
   );
 }
