@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import usePlacesAutocomplete, { getGeocode, getLatLng } from 'use-places-autocomplete'
+import Geosuggest from 'react-geosuggest'
+import '../searchBar.css'
 
 function formatDate(date) {
     var d = new Date(date),
@@ -17,6 +19,7 @@ function formatDate(date) {
 
 const SearchBar = () => {
     const [date, setDate] = useState(formatDate(Date.now()));
+    const [autocompleteSuggestions, setAutocompleteSuggestions] = useState();
 
     const {
         ready,
@@ -29,7 +32,7 @@ const SearchBar = () => {
   
       const handleInput = e => {
           // Update the keyword of the input element
-          setValue(e.target.value);
+          setValue(e);
         };
   
         const handleSelect = ({ description }) => () => {
@@ -48,28 +51,17 @@ const SearchBar = () => {
         };
   
       const renderSuggestions = () =>
-      data.map(suggestion => {
-        const {
-          id,
-          structured_formatting: { main_text, secondary_text }
-        } = suggestion;
-  
-        return (
-          <li
-            key={id}
-            onClick={handleSelect(suggestion)}
-          >
-            <strong>{main_text}</strong> <small>{secondary_text}</small>
-          </li>
-        );
-      });
+      setAutocompleteSuggestions(data.map(suggestion => {
+        return suggestion.description;
+      }));
 
       return (
         <div className="Search">
             <div>
-                <input type="text" placeholder="Location" className="Search-Bar" value={value} 
-                onChange={handleInput} />
-                {<ul>{renderSuggestions()}</ul>}
+                <Geosuggest placeholder="Location"
+                value={value}
+                onChange={(value) => {handleInput(value); renderSuggestions()}} 
+                />
             </div>
             <select name="dangerousnes" className="Dropdown">
                 <option>Ascending</option>
