@@ -14,3 +14,49 @@
   color: white;
 }
 
+.Search{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 200px;
+}
+
+.Search-Bar{
+  float: right;
+  padding: 6px;
+  border-radius: 25px;
+  margin-right: 5px;
+  font-size: 17px;
+}
+
+.Button{
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 25px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: inherit;
+}
+
+.Dropdown{
+  background-color: #f9f9f9;
+  min-width: 160px;
+  padding: 8px 20px;
+  font-size: 15px;
+  border-radius: 25px;
+}
+
+.Datepick{
+  border: 1px solid #c4c4c4;
+  background-color: #fff;
+  padding: 8px 5px;
+  box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+  width: 190px;
+  border-radius: 25px;
+  margin-left: 5px;
+}
