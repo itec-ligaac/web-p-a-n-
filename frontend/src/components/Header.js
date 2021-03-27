@@ -3,9 +3,14 @@ import React from 'react'
 
 const Header = () => {
     return (
-        <header class="App-header">
-            Covidtector
-        </header>
+        <div class="App-header">
+            <div className="Title">Coivdtector</div>  
+            <div className="OtherPage">
+                <div className="About">About</div>
+                <div>Travel safety</div>
+            </div>                 
+        </div>
+        
     )
 }
 
