@@ -1,15 +1,17 @@
 import React from 'react'
 
-const LocationCard = () => {
-    const onClick = ()=>{
-        console.log("Clicked")
+const LocationCard = ({ countryName, vaccinability, setSearchLocation }) => {
+    const onClick = () => {
+        console.log("Clicked");
+        setSearchLocation(countryName);
     }
+
     return (
         <button className="LocationCard" onClick={onClick}>
             <div className="Photo"></div>
-            <div className="CountryName">Madrid</div>
+            <div className="CountryName">{countryName}</div>
             <div className="Vaccinability">
-                <p> Over 9000</p>
+                <p> {vaccinability}</p>
             </div>
         </button>
     )
