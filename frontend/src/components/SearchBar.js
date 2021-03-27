@@ -1,4 +1,7 @@
 import React, { useState } from 'react'
+import usePlacesAutocomplete, { getGeocode, getLatLng } from 'use-places-autocomplete'
+import Geosuggest from 'react-geosuggest'
+import '../searchBar.css'
 
 function formatDate(date) {
     var d = new Date(date),
@@ -12,14 +15,54 @@ function formatDate(date) {
         day = '0' + day;
 
     return [year, month, day].join('-');
-}
+}    
 
-const SearchBar = ({ searchLocation, setSearchLocation }) => {
+const SearchBar = () => {
     const [date, setDate] = useState(formatDate(Date.now()));
+    const [autocompleteSuggestions, setAutocompleteSuggestions] = useState();
 
-    return (
+    const {
+        ready,
+        value,
+        suggestions: { status, data },
+        setValue, clearSuggestions
+      } = usePlacesAutocomplete({
+        requestOptions: { /* Define search scope here */ }
+      });
+  
+      const handleInput = e => {
+          // Update the keyword of the input element
+          setValue(e);
+        };
+  
+        const handleSelect = ({ description }) => () => {
+          // When user selects a place, we can replace the keyword without request data from API
+          // by setting the second parameter as "false"
+          setValue(description, false);
+      
+          // Get latitude and longitude via utility functions
+          getGeocode({ address: description })
+            .then(results => getLatLng(results[0]))
+            .then(({ lat, lng }) => {
+              console.log('📍 Coordinates: ', { lat, lng });
+            }).catch(error => {
+              console.log('😱 Error: ', error)
+            });
+        };
+  
+      const renderSuggestions = () =>
+      setAutocompleteSuggestions(data.map(suggestion => {
+        return suggestion.description;
+      }));
+
+      return (
         <div className="Search">
-            <input type="text" placeholder="Location" className="Search-Bar" value={searchLocation} onChange={(e) => setSearchLocation(e.target.value)} />
+            <div>
+                <Geosuggest placeholder="Location"
+                value={value}
+                onChange={(value) => {handleInput(value); renderSuggestions()}} 
+                />
+            </div>
             <select name="dangerousnes" className="Dropdown">
                 <option>Ascending</option>
                 <option>Descending</option>
