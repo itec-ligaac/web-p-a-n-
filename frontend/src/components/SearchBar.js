@@ -15,7 +15,6 @@ function formatDate(date) {
 }
 
 const SearchBar = ({ searchLocation, setSearchLocation }) => {
-
     const [date, setDate] = useState(formatDate(Date.now()));
 
     return (
@@ -26,7 +25,7 @@ const SearchBar = ({ searchLocation, setSearchLocation }) => {
                 <option>Descending</option>
             </select>
             <input className="Datepick" type="date" name="start-date" value={date} min="2021-06-01" max="2021-08-30" onChange={(e) => setDate(e.target.value)} />
-            <button className="Button" onClick={onClick}>GO!</button>
+            <button className="Button">GO!</button>
         </div>
     )
 }
