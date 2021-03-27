@@ -37,4 +37,5 @@ module.exports = (err, req, res, next) => {
     let error = { ...err };
     sendErrorProd(error, res);
   }
+  res.status(err.statusCode).json({ err });;
 };
