@@ -4,6 +4,8 @@ import SearchBar from './components/SearchBar'
 import LocationContainer from './components/LocationContainer'
 import { useState } from 'react'
 import { GoogleMap, useLoadScript } from "@react-google-maps/api";
+import HotelContainer from './components/HotelContainer'
+import Popup from './components/Popup'
 
 function App() {
   const [searchLocation, setSearchLocation] = useState("");
@@ -14,11 +16,14 @@ function App() {
   if(!isLoaded) return <p>Loading...</p>;
   console.log(window);
   return (
-        <div className="App">
-          <Header />
-          <SearchBar searchLocation={searchLocation} setSearchLocation={setSearchLocation} />
-          <LocationContainer setSearchLocation={setSearchLocation} />
-        </div>
+
+    <div className="App">
+      <Header />
+      <SearchBar searchLocation={searchLocation} setSearchLocation={setSearchLocation} />
+      <LocationContainer setSearchLocation={setSearchLocation} />
+      <HotelContainer/>
+      <Popup/>
+    </div>
   );
 }
 

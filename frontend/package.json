@@ -16,6 +16,7 @@
     "react-google-places-autocomplete": "^3.3.0",
     "react-scripts": "^4.0.3",
     "use-places-autocomplete": "^1.9.1"
+    "react-image-scroller": "^0.3.0",
   },
   "scripts": {
     "start": "react-scripts start",
