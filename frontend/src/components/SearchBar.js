@@ -1,7 +1,21 @@
 import React, { useState } from 'react'
 
+function formatDate(date) {
+    var d = new Date(date),
+        month = '' + (d.getMonth() + 1),
+        day = '' + d.getDate(),
+        year = d.getFullYear();
+
+    if (month.length < 2)
+        month = '0' + month;
+    if (day.length < 2)
+        day = '0' + day;
+
+    return [year, month, day].join('-');
+}
+
 const SearchBar = ({ searchLocation, setSearchLocation }) => {
-    const [date, setDate] = useState("2021-06-06");
+    const [date, setDate] = useState(formatDate(Date.now()));
 
     return (
         <div className="Search">
