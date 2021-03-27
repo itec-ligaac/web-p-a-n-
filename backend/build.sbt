@@ -13,7 +13,7 @@ scalaVersion := "2.13.3"
 
 // It's possible to define many kinds of settings, such as:
 
-name := "hello-world"
+name := ""
 organization := "ch.epfl.scala"
 version := "1.0"
 
@@ -26,6 +26,15 @@ version := "1.0"
 // You can define other libraries as dependencies in your build like this:
 
 libraryDependencies += "org.scala-lang.modules" %% "scala-parser-combinators" % "1.1.2"
+
+
+val AkkaVersion = "2.6.8"
+val AkkaHttpVersion = "10.2.4"
+libraryDependencies ++= Seq(
+  "com.typesafe.akka" %% "akka-actor-typed" % AkkaVersion,
+  "com.typesafe.akka" %% "akka-stream" % AkkaVersion,
+  "com.typesafe.akka" %% "akka-http" % AkkaHttpVersion
+)
 
 // Here, `libraryDependencies` is a set of dependencies, and by using `+=`,
 // we're adding the scala-parser-combinators dependency to the set of dependencies
