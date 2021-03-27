@@ -3,6 +3,7 @@ import './App.css'
 import SearchBar from './components/SearchBar'
 import LocationContainer from './components/LocationContainer'
 import { useState } from 'react'
+import HotelContainer from './components/HotelContainer'
 
 function App() {
   const [searchLocation, setSearchLocation] = useState("");
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <SearchBar searchLocation={searchLocation} setSearchLocation={setSearchLocation} />
       <LocationContainer setSearchLocation={setSearchLocation} />
+      <HotelContainer/>
     </div>
   );
 }

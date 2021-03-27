@@ -1,6 +1,13 @@
 .App {
-  text-align: center;
+  max-width: 100%;
+  overflow: auto;
+  min-height: 300px;
+  border: 1px solid steelblue;
+  padding: 30px;
+  border-radius: 5px;
+  align-items: center;
 }
+
 
 
 .App-header {
@@ -124,4 +131,69 @@
   margin-top: 10px;
   font-size: 17px;
   font-weight: bold;
+}
+
+.HotelLong{
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 3%;
+}
+
+.Weather{
+  background-color: rgb(161, 161, 161);
+  width: 200px;
+  height: 180px;
+  margin-left: 10px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+
+}
+
+.HotelCont{
+  background-color: rgb(218, 216, 216);
+  display: flex;
+  flex-direction: row;
+  width: 1000px;
+  height: 200px;
+  margin-left: 10%;
+  border-radius: 15px;
+  justify-content: center;
+  padding-top: 25px;
+  align-self: center;
+}
+
+.CardText{
+  font-size: 16px;
+  margin:1.8%;
+  font-weight: bold;
+  width:400px ;
+}
+
+.HotelLongPic{
+  width: 200px;
+  height: 150px;
+  background-color: #000;
+  border-radius: 15px;
+  margin-left: 45%;
+
+}
+
+.BigDiv{
+  background-color: rgb(161, 161, 161);
+  display:flex;
+  flex-direction: row;
+  border-radius: 15px;
+  width: 700px;
+  height: 180px;
+  align-items: center;
+}
+
+.WeatherInfo{
+  font-weight: bold;
+  margin-top: 40%;
 }
