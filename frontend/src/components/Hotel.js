@@ -3,7 +3,7 @@ import Weather from './Weather'
 
 const Hotel = () => {
     return (
-        <div className="BigDiv">
+        <button className="BigDiv">
         <div className="HotelLong">
             <p className="CardText">Hotel Name (Rating)</p>
             <p className="CardText">Guests</p>
@@ -12,7 +12,7 @@ const Hotel = () => {
             
         </div>
         <div className="HotelLongPic"></div>
-        </div>
+        </button>
         
     )
 }

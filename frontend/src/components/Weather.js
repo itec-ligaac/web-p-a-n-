@@ -2,9 +2,9 @@ import React from 'react'
 
 const Weather = () => {
     return (
-        <div className='Weather'>
+        <button className='Weather'>
             <p className="WeatherInfo">Weather info</p>
-        </div>
+        </button>
     )
 }
 
