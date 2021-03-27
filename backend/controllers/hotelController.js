@@ -9,7 +9,7 @@ exports.getHotels = catchAsync(async (req, res, next) => {
     latitude: latitude,
     longitude: longitude,
   });
-  console.log(hotels.data);
+
   res.status(200).json({ status: "success", data: { hotels: hotels.data } });
 });
 
@@ -20,5 +20,5 @@ exports.getHotel = catchAsync(async (req, res, next) => {
     hotelId: id
   });
 
-  res.status(200).json({ status: "success", data: { hotel: hotel } });
+  res.status(200).json({ status: "success", data: { hotel: hotel.data } });
 });

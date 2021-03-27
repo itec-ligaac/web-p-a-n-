@@ -6,5 +6,5 @@ exports.getOffer = catchAsync(async (req, res, next) => {
 
   const offer = await amadeus.shopping.hotelOffer(id).get();
 
-  res.status(200).json({ status: "success", data: { offer: offer } });
+  res.status(200).json({ status: "success", data: { offer: offer.data } });
 });
