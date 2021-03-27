@@ -7,6 +7,8 @@ const cors = require('cors');
 
 const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
+const hotelRouter = require('./routes/hotelRoute');
+const offerRouter = require('./routes/offerRoute');
 
 const app = express();
 
@@ -53,6 +55,9 @@ app.use((req, res, next) => {
 app.use('/api/check', (req, res, next) => {
   res.status(200).json({});
 });
+
+app.use('/api/hotel', hotelRouter);
+app.use('/api/offer', offerRouter);
 
 // 404 Error not found handler
 app.all('*', (req, res, next) => {
