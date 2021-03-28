@@ -7,22 +7,22 @@ import { GoogleMap, useLoadScript } from "@react-google-maps/api";
 import HotelContainer from './components/HotelContainer'
 import Popup from './components/Popup'
 
+const libraries = ['places'];
+
 function App() {
-  const [searchLocation, setSearchLocation] = useState("");
+  let [searchLocation, setSearchLocation] = useState();
+  let [canSeeLocationContainers, setCanSeeLocationContainers] = useState(true);
   const { isLoaded, loadError } = useLoadScript({
     googleMapsApiKey: "AIzaSyAn3Z4M460U1yWWNulaTOs09Aj6atUIXmk",
-    libraries: ["places"]
+    libraries: libraries
   });
-  if(!isLoaded) return <p>Loading...</p>;
-  console.log(window);
+  if (!isLoaded) return <p>Loading...</p>;
+
   return (
 
     <div className="App">
       <Header />
-      <SearchBar searchLocation={searchLocation} setSearchLocation={setSearchLocation} />
-      <LocationContainer setSearchLocation={setSearchLocation} />
-      <HotelContainer/>
-      <Popup/>
+      {canSeeLocationContainers && <LocationContainer setSearchLocation={setSearchLocation} />}
     </div>
   );
 }

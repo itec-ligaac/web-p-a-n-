@@ -86,8 +86,6 @@
   background-color: rgb(218, 216, 216);
   border-radius: 15px;
   border: none;
-  width:270px;
-  height:260px;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -121,12 +119,14 @@
 
 .LocationsGrid{
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   padding: 10px;
   justify-content: center;
   align-self: center;
 }
 .CountryName{
+  display: flex;
+  flex-direction: row;
   align-self: center;
   margin-top: 10px;
   font-size: 17px;
