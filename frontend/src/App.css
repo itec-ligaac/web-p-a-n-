@@ -1,0 +1,281 @@
+.App {
+  max-width: 100%;
+  overflow: auto;
+  min-height: 300px;
+  padding: 30px;
+  border-radius: 5px;
+  align-items: center;
+}
+
+
+
+.App-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0px;
+  font-size: calc(10px + 2vmin);
+  background-color: #1fb350;
+  padding: 20px;
+  padding-left: 70px;
+  padding-right: 70px;
+  color: white;
+}
+.Title{
+  font-size: 25px;
+}
+.OtherPage{
+  display: flex;
+  justify-content: safe;
+  font-size: 20px;
+}
+.About{
+  padding-right: 25px;
+}
+
+.Search{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+}
+
+.Search-Bar{
+  float: right;
+  padding: 6px;
+  border-radius: 25px;
+  margin-right: 5px;
+  font-size: 17px;
+  border-color: #c4c4c4;
+}
+
+.Button{
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 25px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: inherit;
+}
+
+.Dropdown{
+  background-color: #f9f9f9;
+  min-width: 30px;
+  padding: 8px 10px;
+  font-size: 15px;
+  border-radius: 25px;
+}
+
+.Datepick{
+  border: 1px solid #c4c4c4;
+  background-color: #fff;
+  padding: 8px 5px;
+  padding-left: 10px;
+  box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+  width: 190px;
+  border-radius: 25px;
+  margin-left: 5px;
+}
+
+.LocationCard{
+  background-color: rgb(218, 216, 216);
+  border-radius: 15px;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  margin-left: 20px;
+  box-shadow: #707070;
+}
+
+.Photo{
+  width:240px;
+  height:151px;
+  background-color: rgb(161, 161, 161);
+  margin-top: 25px;
+  border-radius: 15px;
+  margin-left: 7px;
+}
+
+.Vaccinability{
+  width:240px;
+  height:43px;
+  background-color: rgb(161, 161, 161);
+  margin-top: 20px;
+  border-radius: 15px;
+  margin-left: 7px;
+  margin-bottom: 10px;
+  color: #3f3f3f;
+  font-weight: bold;
+  justify-content: center;
+}
+
+.LocationsGrid{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  padding: 10px;
+  justify-content: center;
+  align-self: center;
+}
+.CountryName{
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  margin-top: 10px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.HotelLong{
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 3%;
+}
+
+.Weather{
+  background-color: rgb(161, 161, 161);
+  width: 200px;
+  height: 180px;
+  margin-left: 10px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  border:none;
+}
+
+.HotelCont{
+  background-color: rgb(218, 216, 216);
+  display: flex;
+  flex-direction: row;
+  width: 1000px;
+  height: 200px;
+  margin-left: 10%;
+  border-radius: 15px;
+  justify-content: center;
+  padding-top: 25px;
+}
+
+.CardText{
+  font-size: 16px;
+  margin:1.8%;
+  font-weight: bold;
+  width:400px ;
+
+}
+
+.HotelLongPic{
+  width: 200px;
+  height: 150px;
+  background-color: #000;
+  border-radius: 15px;
+  margin-left: 8%;
+}
+
+.BigDiv{
+  background-color: rgb(161, 161, 161);
+  display:flex;
+  flex-direction: row;
+  border-radius: 15px;
+  width: 700px;
+  height: 180px;
+  align-items: center;
+  border:none;
+}
+
+.WeatherInfo{
+  font-weight: bold;
+  margin-top: 40%;
+  font-size: 20px;
+}
+
+.PopupContainer{
+  margin-top: 5%;
+  max-width: 60%;
+  overflow: auto;
+  min-height: 300px;
+  padding: 30px;
+  border-radius: 5px;
+  align-items: center;
+  background-color: #c4c4c4;
+  align-self: center;
+  justify-content: center;
+  margin-left: 18%;
+}
+
+.Information{
+  max-width: 100%;
+  background-color: rgb(161, 161, 161);
+  min-height: 100px;
+  border-radius: 10px;
+  color:white;
+  overflow: auto;
+}
+
+.Ameneties{
+  max-width: 100%;
+  background-color: rgb(161, 161, 161);
+  min-height: 100px;
+  border-radius: 10px;
+  margin-top: 1%;
+  color:white;
+  overflow: auto;
+}
+
+.PictureContainer{
+  max-width: 100%;
+  background-color: rgb(161, 161, 161);
+  min-height: 300px;
+  border-radius: 10px;
+  overflow: auto;
+  margin-top: 1%;
+  
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+
+}
+
+.SinglePicture{
+  min-height: 300px;
+  max-width: 60%;
+  background-color: white;
+  margin-left: 20%;
+  margin-bottom: 1%;
+  margin-top: 1%;
+}
+
+.OffersContainer{
+  max-width: 100%;
+  background-color: rgb(161, 161, 161);
+  min-height: 150px;
+  border-radius: 15px;
+  overflow: auto;
+  margin-top: 1%;
+}
+
+.SingleOffer{
+  max-width: 95%;
+  background-color: rgb(78, 78, 78);
+  min-height: 100px;
+  border-radius: 10px;
+  color:white;
+  overflow: auto;
+  margin-top: 2%;
+  margin-left: 2.4%;
+  margin-bottom:2%;
+}
+
+.OfferText{
+  margin-left: 3%;
+}
